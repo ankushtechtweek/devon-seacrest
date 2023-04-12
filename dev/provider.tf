@@ -7,9 +7,10 @@ terraform {
     }
   }
 
-     backend "s3" {
+    backend "s3" {
+    bucket = var.s3_name
     key    = "modules/terraform.tfstate"
-    region = ""
+    region = "us-east-1"
   }
 
 }
@@ -18,7 +19,7 @@ terraform {
 provider "aws" {
   region = var.region
 }
-
+/*
 data "terraform_remote_state" "dev" {
   backend = "remote"
 
@@ -29,3 +30,4 @@ data "terraform_remote_state" "dev" {
     }
   }
 }
+*/

@@ -63,3 +63,9 @@ module "route53" {
   acm_record_value = module.acm.acm_record_value
 
 }
+
+module "s3" {
+
+source           = "./../modules/s3"
+s3_name          = module.s3.s3_name
+}
