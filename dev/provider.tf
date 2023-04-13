@@ -19,15 +19,3 @@ terraform {
 provider "aws" {
   region = var.region
 }
-/*
-data "terraform_remote_state" "dev" {
-  backend = "remote"
-
-  config = {
-    organization = ""
-    workspaces = {
-      name = ""
-    }
-  }
-}
-*/
