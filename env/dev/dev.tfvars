@@ -1,7 +1,7 @@
-name               = "devon"
-environment        = "dev"
-region             = "ap-south-1"
-account_id         = "653470767467"
+name               = "devon" #project name
+environment        = "dev" #environment name (dev, prod)
+region             = "" # aws region where resources will be created
+account_id         = "" #enter aws account id here
 
 
 # vpc Stack
@@ -22,7 +22,7 @@ database-subnets            = ["10.0.50.0/24", "10.0.60.0/24"]
 ecr = {
 image_tag_mutability = "MUTABLE"
 scan_on_push         = true #false for not scanning#
-force_delete         = "true"
+force_delete         = "true" #true for force deletion
 }
 
 alb = {
@@ -43,11 +43,11 @@ engine                                = "postgres"
 engine_version                        = "14.4"
 family                                = "postgres13"  # DB parameter group
 major_engine_version                  = "14"          # DB option group
-instance_class                        = "db.t3.small"
+instance_class                        = "db.t3.small" 
 
 allocated_storage                     = 20
 max_allocated_storage                 = 50
-storage_encrypted                     = true
+storage_encrypted                     = true #false for non encryption of storage
 
 username                              = "test"
 password                              = "sfsfewRE2131dq"
@@ -75,10 +75,10 @@ monitoring_interval                   = 0
 
 github = {
 
-repo_owner    = "ankushtechtweek"
-repo_name     = "vpc"
-branch_name   = "main"
-token         =  "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"
+repo_owner    = "" #enter github repository owner name here
+repo_name     = "" #enter github repository name here
+branch_name   = "" #enter github repository branch name here
+token         =  "" ##enter github token here
 
 }
 
@@ -91,15 +91,10 @@ ecs_task_def = {
   container_port   = "5000"
 }
 
-cloud = {
-api_token    = ""
-organization = ""
-}
-
 retention_in_days = "7"
 
 acm = {
-domain_name = "techtweekinfotech.com"
+domain_name = "" #enter domain name
 }
 
-s3_name = "test-bucket-name-tech"
+s3_name = "" #enter s3 bucket name where you want to store tfstate file
