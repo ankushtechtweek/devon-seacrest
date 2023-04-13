@@ -1,7 +1,5 @@
-exports.handler = async function(event) {
-    console.log("Devon Seacrest");
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: "Devon Seacrest" })
-    };
-  };
+// 'Hello World' nodejs6.10 runtime AWS Lambda function
+exports.handler = (event, context, callback) => {
+    console.log('Hello, Devon');
+    callback(null, 'great success');
+}
