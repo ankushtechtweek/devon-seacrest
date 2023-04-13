@@ -10,7 +10,7 @@ resource "aws_lambda_function" "devon_lambda" {
   filename         = "lambda_function.zip"
   function_name = "devon_seacrest"
   handler      = "index.handler"
-  runtime      = "nodejs14.x"
+  runtime      = "nodejs6.10"
   role         = aws_iam_role.lambda_exec.arn
   source_code_hash = "${data.archive_file.lambda_package.output_base64sha256}"
 
