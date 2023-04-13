@@ -1,17 +1,17 @@
 
 data "archive_file" "lambda_package" {
-  type = "zip"
-  source_file = file("./${path.module}/index.js")
-  output_path = "lambda_function.zip"
+  type        = "zip"
+  source_file = "${path.module}/index.js"
+  output_path = "${path.module}/devon.zip"
 }
 
 
 resource "aws_lambda_function" "devon_lambda" {
-  filename         = "lambda_function.zip"
+  filename      = "${data.archive_file.lambda_package.output_path}"
   function_name = "devon_seacrest"
-  handler      = "index.handler"
-  runtime      = "nodejs6.10"
-  role         = aws_iam_role.lambda_exec.arn
+  handler       = "index.handler"
+  runtime       = "nodejs6.10"
+  role          = aws_iam_role.lambda_exec.arn
   source_code_hash = "${data.archive_file.lambda_package.output_base64sha256}"
 
   environment {
