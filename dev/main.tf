@@ -45,6 +45,7 @@ module "ecs" {
   ecs_task_def   = var.ecs_task_def
   vpc            = var.vpc
   tg_arn         = module.alb.tg_arn
+  retention_in_days = var.retention_in_days
 }
 
 
