@@ -14,3 +14,14 @@ resource "aws_route53_record" "acm" {
   ttl     = "60"
 
 }
+
+
+resource "aws_route53_record" "alb" {
+  zone_id = data.aws_route53_zone.route53_zone.zone_id
+  name    = "testing.techtweekinfotech.com"
+  type    = "CNAME"
+  ttl     = 300
+  records = [
+        "${var.alb_dns}",
+      ]
+}

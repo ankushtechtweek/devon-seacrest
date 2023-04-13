@@ -8,27 +8,16 @@ variable "name" {
   type        = string
 }
 
-
-
 variable "region" {
   description = "project aws region"
   type        = string
 }
-
-
-variable "ec2-instance" {
-  description = "ec2 instance"
-  type        = any
-}
-
 
 variable "ecr" {
   description = "ecr repo"
   type        = any
 }
 #VPC
-
-
 
 # ALB
 variable "alb" {
@@ -63,11 +52,6 @@ variable "github" {
 }
 
 
-variable "elastic_cache" {
-  description = "elastic cache"
-  type        = any
-}
-
 #ECS
 
 variable "retention_in_days" {
@@ -77,30 +61,6 @@ variable "retention_in_days" {
 
 variable "ecs_task_def" {
   description = "task def of api ecs"
-  type        = any
-}
-
-#amplify
-
-variable "amplify" {
-  description = "amplify"
-  type        = any
-}
-
-variable "NEXT_PUBLIC_API_DOMAIN" {
-  description = "amplify env"
-  type        = string
-  default     = ""
-}
-
-variable "NEXT_PUBLIC_CODAT_LINK" {
-  description = "amplify env"
-  type        = string
-  default     = ""
-}
-
-variable "acm" {
-  description = "acm"
   type        = any
 }
 

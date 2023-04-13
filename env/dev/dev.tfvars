@@ -1,4 +1,3 @@
-
 name               = "devon"
 environment        = "dev"
 region             = "us-east-1"
@@ -94,4 +93,10 @@ ecs_task_def = {
 cloud = {
 api_token    = ""
 organization = ""
+}
+
+retention_in_days = "7"
+
+acm = {
+domain_name = "techtweekinfotech.com"
 }

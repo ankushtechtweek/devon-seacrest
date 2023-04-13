@@ -50,7 +50,7 @@ module "ecs" {
 
 module "acm" {
   source      = "./../modules/acm"
-  acm         = var.acm
+  acm            = var.acm
   route53_fqdn   = module.route53.route53_fqdn
 
 }
@@ -61,6 +61,7 @@ module "route53" {
   acm_record_name  = module.acm.acm_record_name 
   acm_record_type  = module.acm.acm_record_type 
   acm_record_value = module.acm.acm_record_value
+  alb_dns          = module.alb.alb_dns
 
 }
 
