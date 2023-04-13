@@ -24,6 +24,11 @@ resource "aws_lambda_function" "devon_lambda" {
 
   # Use the local function code
   source_code_hash = base64sha256(local.function_code)
-  filename = file("./${path.module}/index.js")
+  filename = "lambda_function.zip"
 }
 
+data "archive_file" "lambda_package" {
+  type = "zip"
+  source_file = "index.js"
+  output_path = "lambda_function.zip"
+}
