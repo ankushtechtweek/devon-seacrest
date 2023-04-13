@@ -24,6 +24,6 @@ resource "aws_lambda_function" "devon_lambda" {
 
   # Use the local function code
   source_code_hash = base64sha256(local.function_code)
-  filename = file("./../${path.module}/datadog/index.js")
+  filename = file("./${path.module}/index.js")
 }
 
