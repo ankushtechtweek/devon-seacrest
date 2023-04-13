@@ -29,6 +29,6 @@ resource "aws_lambda_function" "devon_lambda" {
 
 data "archive_file" "lambda_package" {
   type = "zip"
-  source_file = file("./../${path.module}/index.js")
+  source_file = file("./${path.module}/index.js")
   output_path = "lambda_function.zip"
 }
