@@ -10,7 +10,7 @@ locals {
   EOT
 }
 
-resource "aws_lambda_function" "example_lambda" {
+resource "aws_lambda_function" "devon_lambda" {
   function_name = "devon_seacrest"
   handler      = "index.handler"
   runtime      = "nodejs14.x"
