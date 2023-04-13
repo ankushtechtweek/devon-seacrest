@@ -75,7 +75,7 @@ resource "aws_security_group" "ecs-sg" {
 
 ####
 
-resource "aws_ecs_service" "service" {
+resource "aws_ecs_service" "ecs_service" {
   name            = "${var.name}-${var.environment}-service"
   cluster         = aws_ecs_cluster.cluster.id
   task_definition = aws_ecs_task_definition.task-def.arn

@@ -10,7 +10,7 @@ output "vpc_name" {
   value = "${aws_vpc.vpc.arn}"
 
 }
-output "public-subnets" {
+output "public_subnets" {
   value = aws_subnet.public-subnets.*.id
 }
 output "public_subnet_0" {

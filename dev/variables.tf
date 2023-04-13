@@ -68,3 +68,9 @@ variable "s3_name" {
   description = "s3_name"
   type        = any
 }
+
+
+variable "acm" {
+  description = "acm"
+  type        = any
+}
