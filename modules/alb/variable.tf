@@ -19,7 +19,7 @@ variable "vpc_id" {
   type        = any
 }
 
-variable "public-subnets" {
+variable "public_subnets" {
   description = "Public Subnets"
   type        = any
 }

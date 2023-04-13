@@ -13,7 +13,7 @@ module "alb" {
   name        = var.name
   alb         = var.alb
   vpc_id      = module.vpc.vpc_id
-  public-subnets  = module.vpc.public-subnets
+  public_subnets  = module.vpc.public_subnets
   certificate_arn = module.acm.acm_arn
 }
 

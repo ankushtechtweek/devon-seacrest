@@ -38,7 +38,7 @@ resource "aws_alb" "load-balancer" {
   name               = local.name_alb
   internal           = false
   load_balancer_type = "application"
-  subnets            = var.public-subnets
+  subnets            = var.public_subnets
   security_groups    = [aws_security_group.security-group.id]
      
   tags = {
