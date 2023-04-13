@@ -22,6 +22,7 @@ database-subnets            = ["10.0.50.0/24", "10.0.60.0/24"]
 ecr = {
 image_tag_mutability = "MUTABLE"
 scan_on_push         = true #false for not scanning#
+force_delete         = "true"
 }
 
 alb = {
