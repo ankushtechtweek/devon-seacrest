@@ -62,11 +62,4 @@ module "route53" {
   acm_record_type  = module.acm.acm_record_type 
   acm_record_value = module.acm.acm_record_value
   alb_dns          = module.alb.alb_dns
-
-}
-
-module "s3" {
-
-source           = "./../modules/s3"
-s3_name          = module.s3.s3_name
 }

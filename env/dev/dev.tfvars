@@ -1,7 +1,7 @@
 name               = "devon"
 environment        = "dev"
 region             = "us-east-1"
-account_id         = ""
+account_id         = "653470767467"
 
 
 # vpc Stack
@@ -75,9 +75,9 @@ monitoring_interval                   = 0
 github = {
 
 repo_owner    = "ankushtechtweek"
-repo_name   = "vpc"
+repo_name     = "vpc"
 branch_name   = "main"
-token     =  "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"
+token         =  "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"
 
 }
 
@@ -100,3 +100,5 @@ retention_in_days = "7"
 acm = {
 domain_name = "techtweekinfotech.com"
 }
+
+s3_name = "test-bucket-name-tech"
