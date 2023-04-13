@@ -41,6 +41,6 @@ git commit -m “message”
 
 git push
 
-
+## If you want to make any changes for any aws resource then go to tfvars file and make your changes according.
 
 
