@@ -36,7 +36,6 @@ resource "aws_ecs_task_definition" "task-def" {
                 "awslogs-region": "${var.region}",
                 "awslogs-stream-prefix": "ecs"
             }
-        }
       },
     "portMappings": [
       {
