@@ -44,6 +44,7 @@ resource "aws_ecs_task_definition" "task-def" {
         "hostPort": ${tonumber(var.ecs_task_def.container_port)}
       }
     ]
+    }
   ]
 TASK_DEFINITION
 
