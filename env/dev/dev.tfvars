@@ -86,9 +86,9 @@ ecs_task_def = {
 
   task_cpu_limit       = "2048"
   task_memory_limit    = "4096"
-  api_container_cpu    = "0"
-  api_container_memory = "4096"
-  api_container_port   = "5000"
+  container_cpu    = "0"
+  container_memory = "4096"
+  container_port   = "5000"
 }
 
 cloud = {
