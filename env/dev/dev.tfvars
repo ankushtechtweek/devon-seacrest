@@ -7,7 +7,7 @@ account_id         = "653470767467"
 # vpc Stack
 vpc = {
 vpc_cidr                    = "10.0.0.0/16"
-availability_zones          = ["us-west-2a", "us-west-2b"]
+availability_zones          = ["ap-south-1a", "ap-south-1b"]
 enable_dns_support          = "true"
 enable_dns_hostnames        = "true"
 instance_tenancy            = "default"
